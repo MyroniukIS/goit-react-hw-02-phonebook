@@ -1,7 +1,8 @@
 {
-  "name": "react-default",
+  "name": "goit-react-hw-02-phonebook",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://myroniukis.github.io/goit-react-hw-02-phonebook",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -26,13 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/react-default.git"
+    "url": "git+https://github.com/MyroniukIS/goit-react-hw-02-phonebook.git"
   },
-  "author": "Eduard Konovka <ed098ua@gmail.com>",
+  "author": "MyroniukIS <knopkakyrs@gmail.com>",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/react-default/issues"
+    "url": "https://github.com/MyroniukIS/goit-react-hw-02-phonebook/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/react-default",
   "eslintConfig": {
     "extends": [
       "react-app",
