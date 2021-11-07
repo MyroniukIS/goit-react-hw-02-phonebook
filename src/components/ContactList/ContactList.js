@@ -2,21 +2,26 @@ import styles from './ContactList.module.css';
 import { PropTypes } from 'prop-types';
 
 function ContactList({ contacts, handleDelete }) {
-    const contactsList = contacts.map(({ id, name, number }) => (
-    <li className={styles.item} key={id} >
-      <div >
+  const contactsList = contacts.map(({ id, name, number }) => (
+    <li className={styles.item} key={id}>
+      <div>
         <span className={styles.item_text}>
           {name}: {number}
         </span>
-        <button className={styles.item_button} id={id}  type="button" onClick={() => handleDelete(id)}>
+        <button
+          className={styles.item_button}
+          id={id}
+          type="button"
+          onClick={() => handleDelete(id)}
+        >
           Delete
         </button>
       </div>
     </li>
-        ))
-  
-    return <ul className={styles.list}>{ contactsList }</ul>;
-};
+  ));
+
+  return <ul className={styles.list}>{contactsList}</ul>;
+}
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
