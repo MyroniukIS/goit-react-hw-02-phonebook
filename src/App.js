@@ -53,11 +53,11 @@ class App extends Component {
     const filtredContacts = this.getFilteredContacts();
 
     return (
-      <div>
-      <h1>Phonebook</h1>
+      <div className="main_container">
+      <h1 className="main_title">Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
 
-      <h2>Contacts</h2>
+      <h2 className="title">Contacts</h2>
       <Filter filter={filter} onFilterChange={this.handleFilterContacts}/>
       <ContactList contacts={filtredContacts} handleDelete={this.deleteContact} />
 </div>
