@@ -5,11 +5,9 @@ import ContactForm from './components/ContactForm/ContactForm'
 import ContactList from './components/ContactList/ContactList'
 import Filter from './components/Filter/Filter'
 
-
 class App extends Component {
   state = {
-    contacts: [
-    ],
+    contacts: [],
     filter: '',
   }
   
@@ -20,13 +18,10 @@ class App extends Component {
       name,
       number,
     };
-    
        contacts.map(contact => contact.name).includes(name)
         ? alert(`Inputed ${ name } is already in the contacts`)
         : this.setState({ contacts: [contact, ...contacts] });
-    
   }
-
 
   handleFilterContacts = (e) => {
     return this.setState({ filter: e.currentTarget.value });
@@ -35,7 +30,6 @@ class App extends Component {
   getFilteredContacts = () => {
     const { filter, contacts } = this.state;
     const normaziledFilter = filter.toLowerCase();
-
     return contacts.filter(contact => 
       contact.name.toLowerCase().includes(normaziledFilter),
     );
@@ -47,11 +41,9 @@ class App extends Component {
     }));
   };
 
-
   render() {
     const { filter } = this.state;
     const filtredContacts = this.getFilteredContacts();
-
     return (
       <div className="main_container">
       <h1 className="main_title">Phonebook</h1>
@@ -60,10 +52,8 @@ class App extends Component {
       <h2 className="title">Contacts</h2>
       <Filter filter={filter} onFilterChange={this.handleFilterContacts}/>
       <ContactList contacts={filtredContacts} handleDelete={this.deleteContact} />
-</div>
+    </div>
     );
   }
-  
 }
-
 export default App;
